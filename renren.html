@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	    input[type="button"] , button{
+	    	cursor: pointer;
+	    	padding: 5px;
+	    }
+	    *{
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing:border-box;
+			-moz-box-sizing:border-box;
+			box-sizing:border-box;
+			font-size:12px;
+			line-height: 1.5;
+			font-family: microsoft yahei;
+		}
+
+		*::after,*::before{
+		    -webkit-box-sizing:border-box;
+		    -moz-box-sizing:border-box;
+		    box-sizing:border-box;
+		}
+        .clearfix{
+		    *zoom: 1;
+		}
+		.clearfix:before,
+		.clearfix:after{
+		    display: table;
+		    line-height: 0;
+		    content: "";
+		}
+		.clearfix:after{
+		    clear: both;
+		}
+		.traffic{
+			padding: 20px;
+		}
+        .exhibition{
+        	float: left;
+        	width: 500px;
+        	border: 1px solid #999;
+        	margin-right: 50px;
+        	padding: 20px;
+        }
+        .commodity{
+        	width: 13%;
+        	margin: 5px 46px;
+        	float: left;
+        }
+        .commodity img{
+        	width: 100%;
+        	width: 69%;
+        	display: block;
+        	margin-bottom: 5px;
+        }
+        .commodity p{
+            text-indent: 13px;
+            font-size: 16px;
+            margin-bottom: 2px;
+        }
+        .commodity input[type="button"]{
+        	color: #d1cccc;
+        }
+        .insert-coins{
+        	float: left;
+        	padding: 20px 0;
+        }
+        .show-box{
+            width: 200px;
+            height: 50px;
+            border: 1px solid #999;
+            position: relative;
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 50px;
+        }
+        .exhibition-goods{
+        	width: 100%;
+        	padding: 5px;
+        }
+        .coins-in{
+        	position: absolute;
+        	bottom: 8px;
+        	font-size: 20px;
+        	margin-left: -20px;
+        }
+        .coins input[type="button"]{
+        	margin: 20px 8px;
+        	height: 28px;
+        	width: 30px;
+        }
+        .out{
+        	margin-bottom: 40px;
+        }
+        .out input[type="text"]{
+        	width: 130px;
+			height: 30px;
+			margin-left: 20px;
+        }
+        .fall-time{
+        	text-align: center;
+        }
+        .show-time{
+        	color: red;
+        	font-size: 60px;
+        }
+	</style>
+	<script src="renren.js"></script>
+</head>
+<body>
+<div class="traffic">
+    <!--商品展示-->
+	<div class="exhibition">
+
+	    <div class="clearfix">
+	    	<div class="commodity">
+				<img src="img/cooacola.png" alt="">
+				<p>3</p>
+				<input type="button" value="购 买">
+			</div>
+			<div class="commodity">
+				<img src="img/baishi.png" alt="">
+				<p>5</p>
+				<input type="button" value="购 买">
+			</div>
+			<div class="commodity">
+				<img src="img/leshi.png" alt="">
+				<p>10</p>
+				<input type="button" value="购 买">
+			</div>
+	    </div>
+
+	    <div class="clearfix">
+	    	<div class="commodity">
+				<img src="img/cooacola.png" alt="">
+				<p>3</p>
+				<input type="button" value="购 买">
+			</div>
+			<div class="commodity">
+				<img src="img/baishi.png" alt="">
+				<p>5</p>
+				<input type="button" value="购 买">
+			</div>
+			<div class="commodity">
+				<img src="img/leshi.png" alt="">
+				<p>10</p>
+				<input type="button" value="购 买">
+			</div>
+	    </div>
+
+		<div class="clearfix">
+	    	<div class="commodity">
+				<img src="img/cooacola.png" alt="">
+				<p>3</p>
+				<input type="button" value="购 买">
+			</div>
+			<div class="commodity">
+				<img src="img/baishi.png" alt="">
+				<p>5</p>
+				<input type="button" value="购 买">
+			</div>
+			<div class="commodity">
+				<img src="img/leshi.png" alt="">
+				<p>10</p>
+				<input type="button" value="购 买">
+			</div>
+	    </div>
+
+	    <div class="clearfix">
+	    	<div class="commodity">
+				<img src="img/cooacola.png" alt="">
+				<p>3</p>
+				<input type="button" value="购 买">
+			</div>
+			<div class="commodity">
+				<img src="img/baishi.png" alt="">
+				<p>5</p>
+				<input type="button" value="购 买">
+			</div>
+			<div class="commodity">
+				<img src="img/leshi.png" alt="">
+				<p>10</p>
+				<input type="button" value="购 买">
+			</div>
+	    </div>
+	</div>
+
+	<div class="insert-coins">
+	    <!--投币显示器-->
+	    <div class="show-box">
+	    	<span class="coins-in"></span>
+	    </div>
+	    <!--投币按钮-->
+		<div class="coins">
+		    <input type="button" value="1">
+		    <input type="button" value="5">
+		    <input type="button" value="10">
+		    <input type="button" value="20">
+		</div>
+		<!--退币按钮-->
+		<div class="out">
+			<input type="button" value="退 币">
+			<input type="text" value="">
+		</div>
+		<!--已购买商品-->
+		<div class="show-box">
+			<div class="exhibition-goods">
+	        </div>
+		</div>
+		<!--计时器-->
+		<div class="fall-time">
+			<span class="show-time">20</span>
+		</div>
+	</div>
+</div>	
+</body>
+</html>
